@@ -14,6 +14,7 @@ MP3FLASH16P myPlayer;
 #define PIN_pulse_LED     5
 #define PIN_sound         A2
 #define PIN_trigger       A3
+#define PIN_Busy_SOUND    3
 #define number_of_sounds  5
 
 void setup() {
@@ -21,7 +22,7 @@ void setup() {
     pinMode(PIN_voice_LED, OUTPUT);
     pinMode(PIN_pulse_LED, OUTPUT); 
     pinMode(PIN_sound, INPUT);
-    pinMode(PIN_trigger, INPUT);
+    pinMode(PIN_trigger, INPUT_PULLUP);
     randomSeed(analogRead(0));
     Serial.begin(9600);
 }
